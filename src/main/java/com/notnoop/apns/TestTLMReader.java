@@ -8,9 +8,12 @@ public class TestTLMReader {
 		
 		String title = "Howady";
 		String message ="Hello World";
-		if (args.length==2){
-			title = args[0];
-			message = args[0];
+		String pathToCert = "";
+		if (args.length==3){
+			pathToCert = args[0];
+			title = args[1];
+			message = args[2];
+			
 		}else{
 			System.exit(1);
 		}
@@ -19,7 +22,7 @@ public class TestTLMReader {
 		}
 		ApnsService service =
 			    APNS.newService()
-			    .withCert("/Users/raymond/Desktop/private-apns-tlm-reader.p12", "82Hck007")
+			    .withCert(pathToCert, "82Hck007")
 			    .withSandboxDestination()
 			    .build();
 		
