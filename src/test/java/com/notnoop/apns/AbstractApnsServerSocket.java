@@ -35,7 +35,6 @@ public abstract class AbstractApnsServerSocket {
 	 */
 	public final void start() {
 		new Thread(new Runnable() {
-			@Override
 			public void run() {
 				startAccept();
 			}
@@ -90,7 +89,6 @@ public abstract class AbstractApnsServerSocket {
 			this.socket = socket;
 		}
 
-		@Override
 		public void run() {
 			try {
 				handleSocket(socket);

@@ -27,11 +27,9 @@ public interface ApnsServerService {
     Map<byte[], Date> getInactiveDevices();
     
     public static final ApnsServerService EMPTY = new ApnsServerService() {
-		@Override
 		public void messageReceived(ApnsNotification message) throws Exception {
 		}
 		
-		@Override
 		public Map<byte[], Date> getInactiveDevices() {
 			return Collections.emptyMap();
 		}
