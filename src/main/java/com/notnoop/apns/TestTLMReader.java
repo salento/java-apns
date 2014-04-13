@@ -6,8 +6,8 @@ import java.util.Map;
 public class TestTLMReader {
 	public static void main(String[] args) {
 		
-		String title = "Howady";
-		String message ="Hello World";
+		String title = "";
+		String message ="";
 		String pathToCert = "";
 		if (args.length==3){
 			pathToCert = args[0];
